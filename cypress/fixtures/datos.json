@@ -1,0 +1,14 @@
+{
+     "productos": {
+        "producto1": {
+            "preciouni": 7.12,
+            "nombreproducto": "Remera Negra",
+            "cantidad": 2
+        },
+        "producto2": {
+            "preciouni": 14.86,
+            "nombreproducto": "Sweater rosa",
+            "cantidad": 1
+        }
+    }
+}
