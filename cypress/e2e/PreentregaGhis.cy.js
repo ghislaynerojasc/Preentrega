@@ -38,14 +38,14 @@ describe("Page Object model", () => {
         //Verificar el nombre y precio, precio total y cantidad de los dos productos.
         shoppingCartPage.obtenerProducto(data.productos.producto1.nombreproducto).should('exist');
         shoppingCartPage.obtenerNombreProducto(data.productos.producto1.nombreproducto).should('include.text', data.productos.producto1.nombreproducto);
-        shoppingCartPage.obtenerPrecioProducto(data.productos.producto1.preciouni).should('include.text', data.productos.producto1.preciouni);
-        shoppingCartPage.obtenerCantidadProducto(data.productos.producto1.cantidad).should('include.text', data.productos.producto1.cantidad);
-        shoppingCartPage.obtenerPrecioTotal(data.productos.producto1.cantidad,data.productos.producto1.preciouni).should('include.text', data.productos.producto1.cantidad*data.productos.producto1.preciouni);
+        shoppingCartPage.obtenerPrecioProducto(data.productos.producto1.nombreproducto).should('include.text', data.productos.producto1.preciouni);
+        shoppingCartPage.obtenerCantidadProducto(data.productos.producto1.nombreproducto).should('include.text', data.productos.producto1.cantidad);
+        shoppingCartPage.obtenerPrecioTotal(data.productos.producto1.nombreproducto).should('include.text', data.productos.producto1.cantidad*data.productos.producto1.preciouni);
         shoppingCartPage.obtenerProducto(data.productos.producto2.nombreproducto).should('exist');
         shoppingCartPage.obtenerNombreProducto(data.productos.producto2.nombreproducto).should('include.text', data.productos.producto2.nombreproducto);
-        shoppingCartPage.obtenerPrecioProducto(data.productos.producto2.preciouni).should('include.text', data.productos.producto2.preciouni);
-        shoppingCartPage.obtenerCantidadProducto(data.productos.producto2.cantidad).should('include.text', data.productos.producto2.cantidad);
-        shoppingCartPage.obtenerPrecioTotal(data.productos.producto2.cantidad,data.productos.producto2.preciouni).should('include.text', data.productos.producto2.cantidad*data.productos.producto2.preciouni);;
+        shoppingCartPage.obtenerPrecioProducto(data.productos.producto2.nombreproducto).should('include.text', data.productos.producto2.preciouni);
+        shoppingCartPage.obtenerCantidadProducto(data.productos.producto2.nombreproducto).should('include.text', data.productos.producto2.cantidad);
+        shoppingCartPage.obtenerPrecioTotal(data.productos.producto2.nombreproducto).should('include.text', data.productos.producto2.cantidad*data.productos.producto2.preciouni);;
     });
 
 });

@@ -3,9 +3,6 @@ export class ShoppingCartPage {
     constructor() {
         this.shoppingCartLink = '[data-cy="goShoppingCart"]'; 
         this.productoNombre = '//*[@id="productName"]'; 
-        this.productoPrecio = '//*[@id="unitPrice"]'; 
-        this.productoCantidad = '//*[@id="productAmount"]'; 
-        this.precioTotal = '//*[@id="totalPrice"]'; 
     };
 
     clickShoppingCartLink() {
@@ -21,14 +18,14 @@ export class ShoppingCartPage {
     };
 
     obtenerPrecioProducto(producto) {
-        return cy.xpath(this.productoPrecio).contains('p#unitPrice', producto);
+        return cy.contains(producto).siblings("p#unitPrice");
     };
 
     obtenerCantidadProducto(producto) {
-        return cy.xpath(this.productoCantidad).contains('p#productAmount', producto);
+        return cy.contains(producto).siblings("p#productAmount");
     };
-    obtenerPrecioTotal(cantidad,precio) {
-        return cy.xpath(this.precioTotal).contains('p#totalPrice', cantidad*precio);
+    obtenerPrecioTotal(producto) {
+        return cy.contains(producto).siblings("p#totalPrice");
     };
    
 };
