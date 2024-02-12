@@ -1,5 +1,5 @@
 {
-     "productos": {
+    "productos": {
         "producto1": {
             "preciouni": 7.12,
             "nombreproducto": "Remera Negra",
@@ -10,5 +10,10 @@
             "nombreproducto": "Sweater rosa",
             "cantidad": 1
         }
+    },
+    "checkout": {
+        "nombre": "Ghis",
+        "apellido": "Rojas",
+        "tarjeta": 1234567890123456
     }
 }

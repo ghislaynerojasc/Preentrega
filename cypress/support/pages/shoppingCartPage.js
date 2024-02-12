@@ -2,7 +2,9 @@ export class ShoppingCartPage {
 
     constructor() {
         this.shoppingCartLink = '[data-cy="goShoppingCart"]'; 
+        this.checkoutLink = '#goCheckout';
         this.productoNombre = '//*[@id="productName"]'; 
+        this.showTotalPrice = '#price';
     };
 
     clickShoppingCartLink() {
@@ -27,5 +29,16 @@ export class ShoppingCartPage {
     obtenerPrecioTotal(producto) {
         return cy.contains(producto).siblings("p#totalPrice");
     };
-   
+    
+    clickShowTotalPrice() {
+        cy.contains('button', 'Show total price').click();
+    };
+    obtenerShowTotalPrice() {
+        return cy.get(this.showTotalPrice);
+    };
+
+    clickCheckoutLink() {
+        cy.get(this.checkoutLink).click();
+    };
+
 };
